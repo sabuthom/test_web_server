@@ -46,6 +46,14 @@ app.get('/about',(req,res) => {
   });
 });
 
+app.get('/projects',(req,res) => {
+  // res.send('<h3>about</h3>');
+  res.render('about.hbs',{
+    pagetitle:"Projects",
+    currentYear:new Date().getFullYear()
+  });
+});
+
 app.get('/bad',(req,res) => {
   res.send({
     errorMessage:'some thing really went wrong'
